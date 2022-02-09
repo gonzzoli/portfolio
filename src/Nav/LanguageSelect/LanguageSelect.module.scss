@@ -1,0 +1,97 @@
+.language-select {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    user-select: none ;
+    
+    .icon {
+        transition: .15s ease;
+        &.active{
+            transform: rotate(-180deg);
+        }
+    }
+    .dropdown {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 30px;
+        left: -10px;
+        background: rgb(46, 46, 46);
+        padding: 3px;
+        border-radius: 5px;
+        list-style: none;
+        cursor: default;
+        min-width: 95px;
+        .option {
+            padding: 2px 5px;
+            cursor: pointer;
+            transition: .15s ease;
+            border-radius: 5px;
+            color: white;
+            font-size: 1.1rem;
+            &:hover {
+                color: black;
+                background: rgb(211, 211, 211);
+            }
+        }
+    }
+    @media screen and(max-width:'500px'){
+        position: relative;
+        top: 0;
+        right: 0;
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        transition: .2s ease;
+        &:hover {
+            background: white;
+        }
+        .selected {
+            font-size: 20px;
+        } 
+    }
+}
+@media screen and(max-width:'500px') {
+    .dropdown {
+        position: static;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        .option {
+            color: black;
+            background: whitesmoke;
+            text-transform: capitalize;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .2s ease;
+            animation: appear .15s ease forwards;
+            cursor: pointer;
+            font-size: 1.1rem;
+            @keyframes appear {
+                from{
+                    height: 0;
+                }
+                to {
+                    height: 40px;
+                }
+            }
+            &:hover {
+                background: rgb(92, 92, 92);
+                color: white;
+            }
+
+        }
+    }
+    
+}

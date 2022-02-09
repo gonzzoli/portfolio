@@ -1,0 +1,51 @@
+.container {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    margin-top: 100px;
+    padding-bottom: 50px;
+    background: #317773;
+    .curve {
+        position: absolute;
+        left: 0;
+        opacity: 0;
+        animation: appear 2s ease forwards;
+        @media screen and(max-width:'500px'){
+            width: 200%;
+        }
+        @media screen and(max-width:'375px'){
+            width: 300%;
+        }
+        &.top-curve2 {
+            top: 5.1px;
+            transform: translateX(99.8%);
+            path {
+                stroke: rgb(255, 255, 255);
+            }
+        }
+        &.top-curve {
+            top: 0px;
+            path {
+                stroke: white;
+            }
+        }
+        &.bottom-curve {
+            top: 30px;
+            path {
+                stroke: yellow;
+            }
+        }
+        &.bottom-curve2 {
+            top: 34.5px;
+            transform: translateX(99.8%);
+            path {
+                stroke: yellow;
+            }
+        }
+        @keyframes appear {
+            to {
+                opacity: 1;
+            }
+        }
+    }
+}

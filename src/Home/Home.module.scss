@@ -1,0 +1,32 @@
+.home {
+    height: auto;
+    background: url('../img/home-background.svg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    .container {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    .presentation {
+        margin-top: 60px;
+        width: 70%;
+        max-width: 600px;
+        align-self: start;
+        font-size: 1.7rem;
+        letter-spacing: 1px;
+        font-weight: 600;
+        color: rgb(0, 0, 0);
+        @media screen and(max-width:'768px'){
+            width: 100%;
+            margin: 60px auto 0 auto;
+            text-align: center;
+        }
+        @media screen and(max-width:'500px') {
+            font-size: 1.3rem;
+        }
+    }
+}

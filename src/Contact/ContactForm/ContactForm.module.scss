@@ -1,0 +1,84 @@
+.form {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    max-width: 600px;
+    min-height: 250px;
+    background: rgba(67, 169, 103, 0.5);
+    border-radius: 25px;
+    border: 3px solid black;
+    margin: 0 auto 40px auto;
+    user-select: none;
+    @media screen and(max-width:'768px'){
+        width: 90%;
+    }
+    label {
+        margin-bottom: 5px;
+        font-weight: 600;
+        display: inline-block;
+        width: fit-content;
+    }
+    input {
+        margin-bottom: 20px;
+        width: 25%;
+        min-width: 150px;
+        max-width: 400px;
+        border: 1px solid black;
+        padding: 2px;
+        outline: none;
+        border-radius: 3px;
+        transition: .15s ease;
+        &:focus {
+            width: 35%;
+            border-bottom: 2px solid blue;
+        }
+    }
+    textarea {
+        margin-bottom: 15px;
+        border: 1px solid black;
+        width: 40%;
+        max-width: 350px;
+        height: 60px;
+        padding: 2px;
+        outline: none;
+        border-radius: 3px;
+        transition: .15s ease;
+        &:focus {
+            height: 80px;
+            width: 50%;
+        }
+        @media screen and(max-width:'768px'){
+            width: 100%;
+            &:focus {
+                height: 80px;
+                width: 70%;
+            }
+        }
+    }
+    button {
+        width: fit-content;
+        padding: 3px 10px;
+        border: 3px solid black;
+        font-weight: 600;
+        background: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: .2s ease;
+        letter-spacing: 1px;
+        @media screen and(max-width:'768px'){
+            margin: auto;
+            width: 80%;
+        }
+        &:hover {
+            background: teal;
+            color: white;
+        }
+    }
+}
+.success {
+    color: rgb(7, 94, 7);
+}
+.error {
+    color: rgb(131, 8, 8);
+}

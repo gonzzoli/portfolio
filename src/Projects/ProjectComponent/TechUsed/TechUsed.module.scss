@@ -1,0 +1,36 @@
+.made-with-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 40px;
+    margin-top: 25px;
+    height: 100%;
+    @media screen and(max-width:'1100px'){
+        justify-content: center;
+    }
+    .made-with-title {
+        font-size: 26px;
+    }
+    .tech-used {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: center;
+        width: 70%;
+        user-select: none;
+        p {
+            border-radius: 7px;
+            padding: 3px 5px;
+            color: black;
+            transition: .3s ease;
+            &:hover {
+                transform: scale(1.1);
+            }
+            @media screen and(max-width:'450px'){
+                font-size: .9rem;
+            }
+        }
+    }
+}
