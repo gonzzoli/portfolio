@@ -12,7 +12,6 @@ import { LanguageContext } from '../../store/lang-context'
 gsap.registerPlugin(ScrollTrigger)
 
 function ProjectComponent(props) {
-    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1100)
     const leftRef = useRef()
     const leftCtaRef = useRef()
     const rightCtaRef = useRef()
@@ -30,9 +29,6 @@ function ProjectComponent(props) {
             </a>
         </div>
     )
-    window.onresize = () => {
-        setIsSmallScreen(window.innerWidth <= 1100)
-    }
 
     useEffect(() => {
         gsap.from(leftRef.current, {scrollTrigger: {
@@ -63,7 +59,7 @@ function ProjectComponent(props) {
                 <p className={classes['project-description']}>
                     {props.data.description[langCtx.selectedLang==='español'?'spanish':'english']}
                 </p>
-                {!isSmallScreen && ctas}
+                {!props.isMidScreen && ctas}
             </div>
             <div className={classes.middle}>
                 <Slider imgPaths={props.data.imgPaths} />
@@ -71,7 +67,7 @@ function ProjectComponent(props) {
             <div className={classes.right}>
                 <TechUsed lang={props.lang} techNames={props.data.techNames}/>
             </div>
-            {isSmallScreen && <div className={classes.bottom}>
+            {props.isMidScreen && <div className={classes.bottom}>
                 {ctas}
             </div>}
         </div>

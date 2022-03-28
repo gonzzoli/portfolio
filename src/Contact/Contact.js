@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const spanishText = {
     title: 'Contáctame',
-    paragraph: 'Me podes contactar por cualquier red social o llenando el formulario abajo.'
+    paragraph: 'Me podés contactar por cualquier red social o llenando el formulario abajo.'
 }
 
 const englishText = {

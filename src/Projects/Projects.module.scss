@@ -1,5 +1,6 @@
 .projects-section {
     width: 100%;
+    background: black;
     .projects-header {
         background: linear-gradient(to top, black,#317773);
         height: 100px;
@@ -40,10 +41,23 @@
         }
     }
     .projects-container {
-        .spacer {
+        .projects-spacer {
             width: 100%;
-            height: 100px;
-            background: black;
+            height: 400px;
+            background: url('../img/project-spacer.svg');
+            background-size: cover;
+            @media screen and(max-width:'768px'){
+                height: 200px;
+            }
+        }
+        .projects-contact-spacer{
+            width: 100%;
+            height: 250px;
+            background: url('../img/projects-contact-spacer.svg');
+            background-size: cover;
+            @media screen and(max-width:'768px'){
+                height: 150px;
+            }
         }
     }
 }
