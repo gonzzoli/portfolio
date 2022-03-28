@@ -20,6 +20,10 @@ function defineColor(tech) {
             return '#38BDF8'
         case 'redux':
             return '#f030B0'
+        case 'context':
+            return '#5283dd'
+        case 'api':
+            return '#79f46e'
         default:
             return '#b9a596'
     }

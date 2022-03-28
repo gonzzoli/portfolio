@@ -5,6 +5,10 @@ import colorsImg1 from '../img/colors-img/colors-img1.png'
 import colorsImg2 from '../img/colors-img/colors-img2.png'
 import colorsImg3 from '../img/colors-img/colors-img3.png'
 import colorsImg4 from '../img/colors-img/colors-img4.png'
+import langcheckImg1 from '../img/langcheck-img/langcheck-img1.png'
+import langcheckImg2 from '../img/langcheck-img/langcheck-img2.png'
+import langcheckImg3 from '../img/langcheck-img/langcheck-img3.png'
+import langcheckImg4 from '../img/langcheck-img/langcheck-img4.png'
 
 export const projects = [
     {
@@ -19,7 +23,7 @@ export const projects = [
         },
         pageLink: 'https://habit-crash.web.app/habits-list',
         githubLink: 'https://github.com/gonzzoli/habits-app',
-        techNames: ['SASS', 'React', 'Javascript', 'HTML5', 'CSS'],
+        techNames: ['SASS', 'React', 'Context', 'Javascript', 'HTML5', 'CSS'],
         imgPaths: [habitsImg1, habitsImg2, habitsImg3]
     },
     {
@@ -37,5 +41,22 @@ export const projects = [
         techNames: ['TailwindCSS', 'React', 'Javascript', 'Redux',
          'HTML5', 'CSS'],
         imgPaths: [colorsImg1, colorsImg2, colorsImg3, colorsImg4]
+    },
+    {
+        title: 'LangCheck',
+        description: {
+            english: `An app to consume different types of media
+            in different languages so that users can practice
+            their skills in content that a native speaker actually uses.`,
+            spanish: `Una app para consumir diferentes tipos de contenido
+            en distintos idiomas para que los usuarios puedan practicar
+            sus habilidades con multimedia que un hablante nativo 
+            realmente usaría.`
+        },
+        pageLink: 'https://langcheck-app.web.app/',
+        githubLink: 'https://github.com/gonzzoli/langcheck',
+        techNames: ['TailwindCSS', 'React', 'Context', 'Javascript', 'API',
+         'HTML5', 'CSS'],
+        imgPaths: [langcheckImg1, langcheckImg2, langcheckImg3, langcheckImg4]
     },
 ]
