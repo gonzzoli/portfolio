@@ -7,23 +7,36 @@
     user-select: none;
     margin: 0 auto;
     
-    .left-arrow{
+    .arrow-container {
+        background: rgb(255, 255, 255);
+        opacity: 0;
+        transition: all ease .3s;
         position: absolute;
-        left: 15px;
         top: 50%;
         transform: translateY(-50%);
         z-index: 5;
-        font-size: 26px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         cursor: pointer;
+        &.left-arrow {
+            color: black;
+            left: 15px;
+            font-size: 32px;
+        }
+        &.right-arrow {
+            color: black;
+            right: 15px;
+            font-size: 32px;
+        }
     }
-    .right-arrow{
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 5;
-        font-size: 26px;
-        cursor: pointer;
+    &:hover {
+        .arrow-container {
+            opacity: 1;
+        }
     }
     .img-container {
         display: flex;

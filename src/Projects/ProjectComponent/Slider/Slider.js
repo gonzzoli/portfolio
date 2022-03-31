@@ -35,8 +35,13 @@ function Slider(props) {
 
     return (
     <div ref={containerRef} className={classes['slide-container']}>
-        <FontAwesomeIcon onClick={slideBack} className={classes['left-arrow']} icon={faChevronLeft} />
-        <FontAwesomeIcon onClick={slideForward} className={classes['right-arrow']} icon={faChevronRight} />
+        <div className={`${classes['arrow-container']} ${classes['left-arrow']}`}>
+            <FontAwesomeIcon onClick={slideBack} className={classes.arrow} icon={faChevronLeft} />
+        </div>
+        <div className={`${classes['arrow-container']} ${classes['right-arrow']}`}>
+            <FontAwesomeIcon onClick={slideForward} className={classes.arrow} icon={faChevronRight} />
+        </div>
+        
         <div className={classes['img-container']}>
             <img src={props.imgPaths[imgIndex]}/>
         </div>
